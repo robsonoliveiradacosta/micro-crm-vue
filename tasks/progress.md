@@ -8,7 +8,7 @@
 - [x] **02** — Instalar Axios e @vueuse/core
 - [x] **03** — Criar tipos TypeScript
 - [x] **04** — Criar instância Axios com interceptors
-- [ ] **05** — Criar auth store
+- [x] **05** — Criar auth store
 - [ ] **06** — Criar views de Login e Registro
 - [ ] **07** — Configurar rotas + navigation guards
 - [ ] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
