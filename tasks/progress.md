@@ -19,7 +19,7 @@
 - [x] **10** — Criar utilitários (formatCurrency, formatDate, STATUS_*)
 - [x] **11** — Dashboard store + DashboardView
 - [x] **12** — Clients store + ClientsView + componentes
-- [ ] **13** — Projects store + ProjectsView + componentes
+- [X] **13** — Projects store + ProjectsView + componentes
 
 ## Fase 3 — Notas e Detalhe
 
