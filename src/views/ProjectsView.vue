@@ -27,8 +27,8 @@ const formOpen = ref(false)
 const deleteOpen = ref(false)
 const selectedProject = ref<Project | undefined>()
 
-const filterClientId = ref<string>('')
-const filterStatus = ref<string>('')
+const filterClientId = ref<string>('all')
+const filterStatus = ref<string>('all')
 
 onMounted(() => {
   if (clientsStore.clients.length === 0) {
@@ -39,8 +39,8 @@ onMounted(() => {
 
 watch([filterClientId, filterStatus], () => {
   projectsStore.fetchProjects({
-    clientId: filterClientId.value || undefined,
-    status: (filterStatus.value as ProjectStatus) || undefined,
+    clientId: filterClientId.value !== 'all' ? filterClientId.value : undefined,
+    status: filterStatus.value !== 'all' ? (filterStatus.value as ProjectStatus) : undefined,
   })
 })
 
@@ -90,7 +90,7 @@ const allStatuses: ProjectStatus[] = ['ORCAMENTO', 'EM_ANDAMENTO', 'CONCLUIDO', 
           <SelectValue placeholder="Todos os clientes" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="">Todos os clientes</SelectItem>
+          <SelectItem value="all">Todos os clientes</SelectItem>
           <SelectItem
             v-for="client in clientsStore.clients"
             :key="client.id"
@@ -106,7 +106,7 @@ const allStatuses: ProjectStatus[] = ['ORCAMENTO', 'EM_ANDAMENTO', 'CONCLUIDO', 
           <SelectValue placeholder="Todos os status" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="">Todos os status</SelectItem>
+          <SelectItem value="all">Todos os status</SelectItem>
           <SelectItem v-for="status in allStatuses" :key="status" :value="status">
             {{ STATUS_LABELS[status] }}
           </SelectItem>
