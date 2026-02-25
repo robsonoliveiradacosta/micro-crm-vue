@@ -1,0 +1,1 @@
+crie um arquivo com essas fases e tarefas com um checkbox para ser marcado a cada conclusao individual.

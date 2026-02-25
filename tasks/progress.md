@@ -1,0 +1,32 @@
+# Progresso de Implementação — Micro CRM
+
+---
+
+## Fase 1 — Fundação
+
+- [ ] **01** — Setup Tailwind CSS 4 + shadcn-vue
+- [ ] **02** — Instalar Axios e @vueuse/core
+- [ ] **03** — Criar tipos TypeScript
+- [ ] **04** — Criar instância Axios com interceptors
+- [ ] **05** — Criar auth store
+- [ ] **06** — Criar views de Login e Registro
+- [ ] **07** — Configurar rotas + navigation guards
+- [ ] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
+- [ ] **09** — Atualizar App.vue (layout condicional + Toaster)
+
+## Fase 2 — CRUD Principal
+
+- [ ] **10** — Criar utilitários (formatCurrency, formatDate, STATUS_*)
+- [ ] **11** — Dashboard store + DashboardView
+- [ ] **12** — Clients store + ClientsView + componentes
+- [ ] **13** — Projects store + ProjectsView + componentes
+
+## Fase 3 — Notas e Detalhe
+
+- [ ] **14** — Notes store + ProjectDetailView + componentes de notas
+
+## Fase 4 — Polimento
+
+- [ ] **15** — SettingsView (exclusão de conta)
+- [ ] **16** — Estados vazios, skeletons e feedback visual
+- [ ] **17** — Responsividade mobile e ajustes finais
