@@ -4,7 +4,7 @@
 
 ## Fase 1 — Fundação
 
-- [ ] **01** — Setup Tailwind CSS 4 + shadcn-vue
+- [x] **01** — Setup Tailwind CSS 4 + shadcn-vue
 - [ ] **02** — Instalar Axios e @vueuse/core
 - [ ] **03** — Criar tipos TypeScript
 - [ ] **04** — Criar instância Axios com interceptors
