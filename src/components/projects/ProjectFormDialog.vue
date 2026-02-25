@@ -184,7 +184,7 @@ async function submit() {
         </div>
 
         <!-- Datas -->
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div class="space-y-1">
             <Label for="startDate">Data Início</Label>
             <Input id="startDate" v-model="form.startDate" type="date" />

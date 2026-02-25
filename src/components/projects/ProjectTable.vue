@@ -43,15 +43,15 @@ function clientName(clients: Client[], clientId: string): string {
 </script>
 
 <template>
-  <div class="rounded-md border">
+  <div class="overflow-x-auto rounded-md border">
     <Table>
       <TableHeader>
         <TableRow>
           <TableHead>Título</TableHead>
-          <TableHead>Cliente</TableHead>
-          <TableHead>Valor</TableHead>
+          <TableHead class="hidden sm:table-cell">Cliente</TableHead>
+          <TableHead class="hidden sm:table-cell">Valor</TableHead>
           <TableHead>Status</TableHead>
-          <TableHead>Data Início</TableHead>
+          <TableHead class="hidden md:table-cell">Data Início</TableHead>
           <TableHead class="w-12"></TableHead>
         </TableRow>
       </TableHeader>
@@ -64,12 +64,12 @@ function clientName(clients: Client[], clientId: string): string {
         </TableEmpty>
         <TableRow v-for="project in projects" :key="project.id">
           <TableCell class="font-medium">{{ project.title }}</TableCell>
-          <TableCell>{{ clientName(clients, project.clientId) }}</TableCell>
-          <TableCell>{{ formatCurrency(project.value) }}</TableCell>
+          <TableCell class="hidden sm:table-cell">{{ clientName(clients, project.clientId) }}</TableCell>
+          <TableCell class="hidden sm:table-cell">{{ formatCurrency(project.value) }}</TableCell>
           <TableCell>
             <ProjectStatusBadge :status="project.status" />
           </TableCell>
-          <TableCell>{{ project.startDate ? formatDate(project.startDate) : '—' }}</TableCell>
+          <TableCell class="hidden md:table-cell">{{ project.startDate ? formatDate(project.startDate) : '—' }}</TableCell>
           <TableCell>
             <div class="flex items-center gap-1">
               <ProjectStatusActions

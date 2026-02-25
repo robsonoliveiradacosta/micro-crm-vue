@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="p-4 sm:p-6">
     <h1 class="mb-6 text-2xl font-bold">Dashboard</h1>
 
     <div v-if="dashboardStore.loading" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">

@@ -74,7 +74,7 @@ const allStatuses: ProjectStatus[] = ['ORCAMENTO', 'EM_ANDAMENTO', 'CONCLUIDO', 
 </script>
 
 <template>
-  <div class="space-y-6 p-6">
+  <div class="space-y-6 p-4 sm:p-6">
     <div class="flex items-center justify-between">
       <h1 class="text-2xl font-bold">Projetos</h1>
       <Button @click="openCreate">

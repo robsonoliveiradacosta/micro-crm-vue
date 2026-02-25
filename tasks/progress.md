@@ -29,4 +29,4 @@
 
 - [x] **15** — SettingsView (exclusão de conta)
 - [x] **16** — Estados vazios, skeletons e feedback visual
-- [ ] **17** — Responsividade mobile e ajustes finais
+- [x] **17** — Responsividade mobile e ajustes finais

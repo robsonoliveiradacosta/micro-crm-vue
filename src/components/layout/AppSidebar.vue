@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { LayoutDashboard, Users, FolderKanban, Settings } from 'lucide-vue-next'
 import {
@@ -12,9 +13,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
+  useSidebar,
 } from '@/components/ui/sidebar'
 
 const route = useRoute()
+const { setOpenMobile } = useSidebar()
+
+watch(
+  () => route.path,
+  () => setOpenMobile(false),
+)
 
 const navItems = [
   { title: 'Dashboard', url: '/', icon: LayoutDashboard },

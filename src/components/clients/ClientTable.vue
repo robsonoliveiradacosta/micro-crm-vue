@@ -28,14 +28,14 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="rounded-md border">
+  <div class="overflow-x-auto rounded-md border">
     <Table>
       <TableHeader>
         <TableRow>
           <TableHead>Nome</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Telefone</TableHead>
-          <TableHead>Empresa</TableHead>
+          <TableHead class="hidden sm:table-cell">Email</TableHead>
+          <TableHead class="hidden sm:table-cell">Telefone</TableHead>
+          <TableHead class="hidden sm:table-cell">Empresa</TableHead>
           <TableHead class="w-12"></TableHead>
         </TableRow>
       </TableHeader>
@@ -48,9 +48,9 @@ const emit = defineEmits<{
         </TableEmpty>
         <TableRow v-for="client in clients" :key="client.id">
           <TableCell class="font-medium">{{ client.name }}</TableCell>
-          <TableCell>{{ client.email ?? '—' }}</TableCell>
-          <TableCell>{{ client.phone ?? '—' }}</TableCell>
-          <TableCell>{{ client.company ?? '—' }}</TableCell>
+          <TableCell class="hidden sm:table-cell">{{ client.email ?? '—' }}</TableCell>
+          <TableCell class="hidden sm:table-cell">{{ client.phone ?? '—' }}</TableCell>
+          <TableCell class="hidden sm:table-cell">{{ client.company ?? '—' }}</TableCell>
           <TableCell>
             <DropdownMenu>
               <DropdownMenuTrigger as-child>

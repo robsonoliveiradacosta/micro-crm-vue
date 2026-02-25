@@ -35,7 +35,7 @@ async function confirmDeleteAccount() {
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="p-4 sm:p-6">
     <h1 class="mb-6 text-2xl font-bold">Configurações</h1>
 
     <section>

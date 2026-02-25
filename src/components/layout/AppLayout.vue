@@ -9,7 +9,7 @@ import AppHeader from './AppHeader.vue'
     <AppSidebar />
     <SidebarInset>
       <AppHeader />
-      <main class="flex-1 overflow-auto p-4 lg:p-6">
+      <main class="flex-1 overflow-auto">
         <slot />
       </main>
     </SidebarInset>

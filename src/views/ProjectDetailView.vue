@@ -75,7 +75,7 @@ watch(
 </script>
 
 <template>
-  <div class="space-y-6 p-6">
+  <div class="space-y-6 p-4 sm:p-6">
     <!-- Back button -->
     <Button variant="ghost" size="sm" @click="router.push('/projects')">
       <ArrowLeft class="mr-2 h-4 w-4" />
