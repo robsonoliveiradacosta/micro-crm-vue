@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { MoreHorizontal, Pencil, Trash2 } from 'lucide-vue-next'
+import { Eye, MoreHorizontal, Pencil, Trash2 } from 'lucide-vue-next'
+import { useRouter } from 'vue-router'
 import {
   Table,
   TableBody,
@@ -32,6 +33,8 @@ const emit = defineEmits<{
   delete: [project: Project]
   statusChange: [projectId: string, newStatus: ProjectStatus]
 }>()
+
+const router = useRouter()
 
 function clientName(clients: Client[], clientId: string): string {
   return clients.find((c) => c.id === clientId)?.name ?? '—'
@@ -81,6 +84,11 @@ function clientName(clients: Client[], clientId: string): string {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
+                  <DropdownMenuItem @click="router.push(`/projects/${project.id}`)">
+                    <Eye class="mr-2 h-4 w-4" />
+                    Ver Detalhes
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
                   <DropdownMenuItem @click="emit('edit', project)">
                     <Pencil class="mr-2 h-4 w-4" />
                     Editar

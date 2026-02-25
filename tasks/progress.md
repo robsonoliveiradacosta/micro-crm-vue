@@ -23,7 +23,7 @@
 
 ## Fase 3 — Notas e Detalhe
 
-- [ ] **14** — Notes store + ProjectDetailView + componentes de notas
+- [x] **14** — Notes store + ProjectDetailView + componentes de notas
 
 ## Fase 4 — Polimento
 
