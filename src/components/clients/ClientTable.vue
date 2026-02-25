@@ -23,6 +23,7 @@ defineProps<{ clients: Client[] }>()
 const emit = defineEmits<{
   edit: [client: Client]
   delete: [client: Client]
+  create: []
 }>()
 </script>
 
@@ -41,10 +42,8 @@ const emit = defineEmits<{
       <TableBody>
         <TableEmpty v-if="clients.length === 0" :colspan="5">
           <div class="py-8 text-center">
-            <p class="text-muted-foreground mb-2 text-sm">Nenhum cliente cadastrado</p>
-            <p class="text-muted-foreground text-xs">
-              Clique em "Novo Cliente" para cadastrar o primeiro.
-            </p>
+            <p class="text-muted-foreground mb-4 text-sm">Nenhum cliente cadastrado</p>
+            <Button size="sm" @click="emit('create')">Cadastrar cliente</Button>
           </div>
         </TableEmpty>
         <TableRow v-for="client in clients" :key="client.id">

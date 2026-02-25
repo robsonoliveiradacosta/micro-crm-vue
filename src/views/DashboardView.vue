@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
 import { useDashboardStore } from '@/stores/dashboard'
 import DashboardStats from '@/components/dashboard/DashboardStats.vue'
 import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
 
 const dashboardStore = useDashboardStore()
 
@@ -19,7 +21,21 @@ onMounted(() => {
       <Skeleton v-for="i in 5" :key="i" class="h-28 w-full rounded-xl" />
     </div>
 
-    <DashboardStats v-else-if="dashboardStore.data" :data="dashboardStore.data" />
+    <template v-else-if="dashboardStore.data">
+      <DashboardStats :data="dashboardStore.data" />
+
+      <div
+        v-if="dashboardStore.data.totalClients === 0"
+        class="mt-6 rounded-lg border border-dashed p-8 text-center"
+      >
+        <p class="text-muted-foreground mb-4 text-sm">
+          Cadastre seu primeiro cliente para começar.
+        </p>
+        <Button as-child>
+          <RouterLink to="/clients">Cadastrar cliente</RouterLink>
+        </Button>
+      </div>
+    </template>
 
     <div v-else class="text-muted-foreground py-12 text-center">
       <p>Nenhum dado disponível no momento.</p>

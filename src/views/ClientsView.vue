@@ -56,6 +56,7 @@ function openDelete(client: Client) {
       :clients="clientsStore.clients"
       @edit="openEdit"
       @delete="openDelete"
+      @create="openCreate"
     />
 
     <ClientFormDialog

@@ -128,6 +128,7 @@ const allStatuses: ProjectStatus[] = ['ORCAMENTO', 'EM_ANDAMENTO', 'CONCLUIDO', 
       @edit="openEdit"
       @delete="openDelete"
       @status-change="handleStatusChange"
+      @create="openCreate"
     />
 
     <ProjectFormDialog v-model:open="formOpen" :project="selectedProject" />

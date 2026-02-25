@@ -32,6 +32,7 @@ const emit = defineEmits<{
   edit: [project: Project]
   delete: [project: Project]
   statusChange: [projectId: string, newStatus: ProjectStatus]
+  create: []
 }>()
 
 const router = useRouter()
@@ -57,10 +58,8 @@ function clientName(clients: Client[], clientId: string): string {
       <TableBody>
         <TableEmpty v-if="projects.length === 0" :colspan="6">
           <div class="py-8 text-center">
-            <p class="text-muted-foreground mb-2 text-sm">Nenhum projeto encontrado</p>
-            <p class="text-muted-foreground text-xs">
-              Clique em "Novo Projeto" para cadastrar o primeiro.
-            </p>
+            <p class="text-muted-foreground mb-4 text-sm">Nenhum projeto encontrado</p>
+            <Button size="sm" @click="emit('create')">Criar projeto</Button>
           </div>
         </TableEmpty>
         <TableRow v-for="project in projects" :key="project.id">
