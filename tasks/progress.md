@@ -12,7 +12,7 @@
 - [x] **06** — Criar views de Login e Registro
 - [x] **07** — Configurar rotas + navigation guards
 - [x] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
-- [ ] **09** — Atualizar App.vue (layout condicional + Toaster)
+- [x] **09** — Atualizar App.vue (layout condicional + Toaster)
 
 ## Fase 2 — CRUD Principal
 
