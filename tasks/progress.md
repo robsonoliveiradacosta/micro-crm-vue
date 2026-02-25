@@ -9,7 +9,7 @@
 - [x] **03** — Criar tipos TypeScript
 - [x] **04** — Criar instância Axios com interceptors
 - [x] **05** — Criar auth store
-- [ ] **06** — Criar views de Login e Registro
+- [x] **06** — Criar views de Login e Registro
 - [ ] **07** — Configurar rotas + navigation guards
 - [ ] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
 - [ ] **09** — Atualizar App.vue (layout condicional + Toaster)
