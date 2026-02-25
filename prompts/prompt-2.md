@@ -1,0 +1,1 @@
+crie uma techspec a partir do @tasks/prd.md
