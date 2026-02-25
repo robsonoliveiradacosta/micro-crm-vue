@@ -10,8 +10,8 @@
 - [x] **04** — Criar instância Axios com interceptors
 - [x] **05** — Criar auth store
 - [x] **06** — Criar views de Login e Registro
-- [ ] **07** — Configurar rotas + navigation guards
-- [ ] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
+- [x] **07** — Configurar rotas + navigation guards
+- [x] **08** — Criar layout (AppLayout, AppSidebar, AppHeader)
 - [ ] **09** — Atualizar App.vue (layout condicional + Toaster)
 
 ## Fase 2 — CRUD Principal

@@ -17,7 +17,7 @@ const router = createRouter({
       meta: { public: true },
     },
 
-    // Protected routes (will use AppLayout later)
+    // Protected routes (wrapped by AppLayout in App.vue)
     {
       path: '/',
       name: 'dashboard',
