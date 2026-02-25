@@ -16,7 +16,7 @@
 
 ## Fase 2 — CRUD Principal
 
-- [ ] **10** — Criar utilitários (formatCurrency, formatDate, STATUS_*)
+- [x] **10** — Criar utilitários (formatCurrency, formatDate, STATUS_*)
 - [ ] **11** — Dashboard store + DashboardView
 - [ ] **12** — Clients store + ClientsView + componentes
 - [ ] **13** — Projects store + ProjectsView + componentes
