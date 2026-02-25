@@ -27,6 +27,6 @@
 
 ## Fase 4 — Polimento
 
-- [ ] **15** — SettingsView (exclusão de conta)
+- [x] **15** — SettingsView (exclusão de conta)
 - [ ] **16** — Estados vazios, skeletons e feedback visual
 - [ ] **17** — Responsividade mobile e ajustes finais
